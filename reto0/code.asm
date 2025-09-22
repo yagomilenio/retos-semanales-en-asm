@@ -9,7 +9,7 @@ section .bss ; seccion de memoria para variables sin valor definido
     boolm3 resb 1
     boolm5 resb 1
 section .text
-global main
+global _start
 
 print: 
 
@@ -96,7 +96,7 @@ comprobar
     skipm5:
         ret
     
-main:
+_start:
     mov ebp, esp; for correct debugging
     mov word [count], 1
     
