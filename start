@@ -1,0 +1,5 @@
+#!/bin/bash
+
+nasm -f elf32 $1 -o tmp.o
+ld -m elf_i386 tmp.o -o tmp
+./tmp
